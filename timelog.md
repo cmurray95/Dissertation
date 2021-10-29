@@ -49,3 +49,7 @@
 # Week 5 
 
 ### 28 Oct 2021
+* *3 hours* Tried to install the espruino node package. Ran into multiple issues as some dependencies in the package were out of date.
+
+### 29 Oct 2021
+* *0.5 hours* Fourth Supervisor Meeting

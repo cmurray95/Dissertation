@@ -21,8 +21,8 @@ The specifics must be defined by you but the overall goals are to:
 
 
 	
- The uploader should work by pulling code from a URL that contain the code to push (user defined, for example on a Gist/Github page)
+* The uploader should work by pulling code from a URL that contain the code to push (user defined, for example on a Gist/Github page)
 	
- The uploader should be easy to load on any new webpage in the background and expose a function to the user for pressing a button to start the upload process and confirm when it is done
+ * The uploader should be easy to load on any new webpage in the background and expose a function to the user for pressing a button to start the upload process and confirm when it is done
 
- Once the code is uploaded on the device, the webpage needs to be made aware of it so communication between the smartphone and the device can be started.
+ * Once the code is uploaded on the device, the webpage needs to be made aware of it so communication between the smartphone and the device can be started.

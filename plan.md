@@ -10,11 +10,21 @@ Week-by-week plan for the whole project. Update this as you go along.
 ## Winter semester
 
 * **Week 1**
+    - Meet with supervisor and discuss brief
 * **Week 2**
+    - Clarify ideas for project
+    - Research methods of uploading code onto espruino
+    - Find open source projects that may help with understanding espruino-specific code
 * **Week 3**
+    - Collect hardware
+    - Begin planning out API for remote code upload
 * **Week 4**
+    - Learn the espruino API by creating test applications using the puck.js and bangle.js
 * **Week 5**
+    - Setup code repo for the remote code uploader
+    - Locate and install useful dependencies/node packages
 * **Week 6**
+    - Begin writing code uploader API
 * **Week 7**
 * **Week 8**
 * **Week 9**
