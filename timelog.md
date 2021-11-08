@@ -53,3 +53,14 @@
 
 ### 29 Oct 2021
 * *0.5 hours* Fourth Supervisor Meeting
+
+# Week 6
+### 01 Nov 2021
+* *2 hours* Researched API design methodologies
+
+### 03 Nov 2021
+* *2 hours* Further research into API Design
+* *0.5 hours* Collated examples of good API design to examine
+
+### 05 Nov 2021
+* *2 hours* Read through codebase of examples found previously

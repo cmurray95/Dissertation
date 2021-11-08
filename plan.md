@@ -24,8 +24,9 @@ Week-by-week plan for the whole project. Update this as you go along.
     - Setup code repo for the remote code uploader
     - Locate and install useful dependencies/node packages
 * **Week 6**
-    - Begin writing code uploader API
+    - Research good API Design
 * **Week 7**
+    - Begin writing code uploader API
 * **Week 8**
 * **Week 9**
 * **Week 10**

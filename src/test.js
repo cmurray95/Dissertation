@@ -1,3 +1,7 @@
+/**CODE TAKEN FROM https://www.espruino.com/Interfacing#node-js-javascript
+ * This is purely to test that the hardware is functioning
+ */
+
 /* On Linux, BLE normally needs admin right to be able to access BLE
  *
  * sudo setcap cap_net_raw+eip $(eval readlink -f `which node`)
