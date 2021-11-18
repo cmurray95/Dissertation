@@ -64,3 +64,18 @@
 
 ### 05 Nov 2021
 * *2 hours* Read through codebase of examples found previously
+
+# Week 7
+### 10 Nov 2021
+* *1 hours* Solved issue with espruino node package - bluetooth dongle i had was using a new chipset that wasn't compatible
+
+### 12 Nov 2021
+* *1 hours* Started developing demo app using node.js library
+
+# Week 8 
+### 17 Nov 2021
+* *2 hours* researched UART, specifically nordic UART for bluetooth
+* *1 hours* read over uart.js api 
+
+### 18 Nov 2021
+* *1 hours* converted node.js demo to use uart.js instead

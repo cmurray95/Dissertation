@@ -26,8 +26,11 @@ Week-by-week plan for the whole project. Update this as you go along.
 * **Week 6**
     - Research good API Design
 * **Week 7**
-    - Begin writing code uploader API
+    - Further research into good API design
+    - Create Demo App
 * **Week 8**
+    - Collate API calls that will be needed
+    - 
 * **Week 9**
 * **Week 10**
 * **Week 11 [PROJECT WEEK]**
