@@ -74,8 +74,20 @@
 
 # Week 8 
 ### 17 Nov 2021
-* *2 hours* researched UART, specifically nordic UART for bluetooth
-* *1 hours* read over uart.js api 
+* *2 hours* Researched UART, specifically nordic UART for bluetooth
+* *1 hours* Read over uart.js api 
 
 ### 18 Nov 2021
-* *1 hours* converted node.js demo to use uart.js instead
+* *1 hours* Converted node.js demo to use uart.js instead
+
+### 19 Nov 2021
+* *0.5 hours* Prepped for supervisor meeting
+* *0.5 hours* Met with supervisor
+
+# Week 9 #
+
+### 23 Nov 2021
+* *1 hours* Began work on remote uploader. Wrote functions to retrieve raw github data
+* *0.5 hours* Researched into Mozilla Public License, v. 2.0 to better understand how I can use the UART.js script
+* *1 hours* Got uploader to write code to puck using data retrieved from github URL
+

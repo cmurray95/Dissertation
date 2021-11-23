@@ -30,8 +30,9 @@ Week-by-week plan for the whole project. Update this as you go along.
     - Create Demo App
 * **Week 8**
     - Collate API calls that will be needed
-    - 
 * **Week 9**
+    - Clearer roadmap of project
+    - Prototype uploader
 * **Week 10**
 * **Week 11 [PROJECT WEEK]**
 * **Week 12 [PROJECT WEEK]** Status report submitted.
