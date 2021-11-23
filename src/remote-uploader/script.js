@@ -1,4 +1,14 @@
-//import {UART} from './uart'
+let connection;
+
+/**
+ * Connect to device 
+ */
+function connect(){
+    UART.connect((c) => {
+        if(!c) throw "Error!";
+        connection = c;
+    })
+}
 
 /**
  * 
@@ -8,15 +18,28 @@
 async function getRawCode(url){
     const res = await fetch(url);
     let data = await res.text();
-    data = data.concat(data, "\n");
+    data = data + "\n";
     return data;
 }
 
-function upload(url){
+/**
+ * Upload code retrieved from URL
+ */
+function upload() {
+    let url = document.getElementById("url").value;
     let code = getRawCode(url);
     code.then((raw) => {
-        UART.write(raw);
+        reset();
+        connection.write(raw);
     });
 }
+
+/**
+ * Resets device removing currently stored code
+ */
+function reset(){
+    connection.write("reset();\n");
+}
+
 
 

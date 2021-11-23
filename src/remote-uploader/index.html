@@ -8,10 +8,9 @@
     <script src="script.js"></script>
     <title>Document</title>
 </head>
-<body>
-    <form action="javascript:upload(this)">
-        <input type="text" name="url" id="url">
-        <input type="submit" value="submit">
-    </form>
+<body onload="connect()">
+<input type="text" name="url" id="url">
+<button onclick="upload()">Upload</button>
+<button onclick="reset()">Reset</button>
 </body>
 </html>
