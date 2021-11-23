@@ -7,3 +7,5 @@ function accel(){
     `  
     UART.write(writeVal);
 }
+
+accel();
