@@ -1,8 +1,22 @@
-async function getCode(){
-    let code = 'https://github.com/cmurray95/Dissertation/blob/main/src/puck-demo/script.js'
-    const res = await fetch(code);
-    const data = await res.text();
-    console.log(data);
+//import {UART} from './uart'
+
+/**
+ * 
+ * @param {String} url link to raw github file containing code.
+ * @returns promise containing code as a string
+ */
+async function getRawCode(url){
+    const res = await fetch(url);
+    let data = await res.text();
+    data = data.concat(data, "\n");
+    return data;
 }
 
-getCode();
+function upload(url){
+    let code = getRawCode(url);
+    code.then((raw) => {
+        UART.write(raw);
+    });
+}
+
+
