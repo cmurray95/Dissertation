@@ -34,8 +34,14 @@ Week-by-week plan for the whole project. Update this as you go along.
     - Clearer roadmap of project
     - Prototype uploader
 * **Week 10**
+    - Collate required Node.js packages
+    - Port uploader to Node.js
 * **Week 11 [PROJECT WEEK]**
-* **Week 12 [PROJECT WEEK]** Status report submitted.
+    - Write file comparator 
+    - Add Flash upload functionallity
+    - Establish ideas for demo projects
+* **Week 12 [PROJECT WEEK]** 
+    - Status report
 
 ## Winter break
 

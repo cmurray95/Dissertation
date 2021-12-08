@@ -90,4 +90,13 @@
 * *1 hours* Began work on remote uploader. Wrote functions to retrieve raw github data
 * *0.5 hours* Researched into Mozilla Public License, v. 2.0 to better understand how I can use the UART.js script
 * *1 hours* Got uploader to write code to puck using data retrieved from github URL
+* *1 hours* refactored uploader and updated it to reset stored code before writing
 
+### 26 Nov 2021
+* *0.5 hours* Supervisor meeting
+* *1 hours* Reflected on feedback from meeting and refined project plan
+
+# Week 10 #
+### 02 Dec 2021
+* *1 hours* Researched Node.js unpkg tool
+* *0.5 hours* Installed required packages and tools

@@ -34,6 +34,7 @@ function upload() {
     });
 }
 
+
 /**
  * Resets device removing currently stored code
  */
