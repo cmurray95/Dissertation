@@ -34,6 +34,14 @@ function upload() {
     });
 }
 
+function uploadFlash() {
+    let url = document.getElementById("url").value;
+    let code = getRawCode(url);
+    code.then((raw) => {
+        reset();
+        connection.write(raw);
+    });
+}
 
 /**
  * Resets device removing currently stored code
