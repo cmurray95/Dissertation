@@ -5,7 +5,7 @@ let connection;
  */
 function connect(){
     UART.connect((c) => {
-        if(!c) throw "Error!";
+        if(!c) throw "Error! Could not connect to device";
         connection = c;
     })
 }
@@ -32,15 +32,8 @@ function upload() {
         reset();
         connection.write(raw);
     });
-}
-
-function uploadFlash() {
-    let url = document.getElementById("url").value;
-    let code = getRawCode(url);
-    code.then((raw) => {
-        reset();
-        connection.write(raw);
-    });
+    // flag test
+    //connection.write("function test(){Puck.getTemperature();}");
 }
 
 /**
@@ -50,5 +43,18 @@ function reset(){
     connection.write("reset();\n");
 }
 
+/**
+ * 
+ * @returns true if code was uploaded succesfully
+ */
+ function checkFlag() {
+    let flag = true;
+    let dump;
+    UART.eval('dump();\n', (data) => {
+        dump = data;
+    });
+    console.log(dump);
+    return flag;
+}
 
 

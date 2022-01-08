@@ -1,0 +1,21 @@
+title Remote Code Uploader Workflow
+
+actor User
+participant Uploader
+participant Espruino
+participant Webpage
+participant Repository
+
+User->Uploader:Loads uploader via browser
+Uploader->Espruino:Connect to Device
+Uploader<--Espruino:Confirm Connection
+Uploader->Repository:Connect to server
+Uploader<--Repository:Retrieve Remote Code
+Uploader->Espruino:Write Code to Device
+Uploader<-Espruino:Confirm Upload
+User<-Uploader:Alert User
+User->Webpage:Load page via browser
+Espruino<-Webpage:Connect to Device
+Webpage<--Espruino:Confirm Connection
+Webpage<->User:Interaction
+

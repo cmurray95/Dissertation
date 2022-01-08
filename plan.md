@@ -42,6 +42,7 @@ Week-by-week plan for the whole project. Update this as you go along.
     - Establish ideas for demo projects
 * **Week 12 [PROJECT WEEK]** 
     - Status report
+    - Refactor github/project structure - seperate dissertation material and remote uploader
 
 ## Winter break
 

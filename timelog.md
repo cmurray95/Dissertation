@@ -100,3 +100,29 @@
 ### 02 Dec 2021
 * *1 hours* Researched Node.js unpkg tool
 * *0.5 hours* Installed required packages and tools
+
+### 03 Dec 2021
+* *0.5 hours* supervisor meeting
+
+# Week 11 #
+### 08 Dec 2021
+* *1 hours* Created practice project for working with and publishing npm modules
+* *2 hours* Researched methods for saving to flash memory
+
+### 10 Dec 2021
+* *0.5 hours* Supervisor Meeting
+* *0.5 hours* updated plan 
+
+# Week 12 #
+### 16 Dec 2021
+* *2 hours* Researched best method for sending flag to device confirming succesful upload
+* *1 hours* Researched and drafted up ideas for demo projects
+* *3 hours* Tried to get code dump to work properly
+* *1 hours* Wrote up status report
+
+### 17 Dec 2021
+* *0.5 hours* Supervisor meeting
+
+# Winter Break # 
+### 02 Jan 2021
+* *1 hours* Created sequence diagram showing example worfklow of uploader
