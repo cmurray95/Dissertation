@@ -1,8 +1,3 @@
-function accel(){
-    Puck.on('accel', a=>{
-        LED2.write(a.acc.z < 0);
-    });
-    Puck.accelOn();
+function green() {
+    digitalWrite(LED2,1);
 }
-
-accel();
