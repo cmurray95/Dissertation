@@ -148,3 +148,6 @@
  * *1 hours* Attempted to get interactive demo working
  * *2 hours* Began refactoring uploader to make use of ES6 Classes
 
+### 21 Jan 2022
+* *3 hours* Attempted to implement UART.eval() and UART.write() under a single connection, to no success
+

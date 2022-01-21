@@ -19,7 +19,7 @@ function disc() {
 }
 
 function test() {
-    connection.checkFlag();
+    console.log(connection.checkStatus());
 }
 
 

@@ -10,6 +10,8 @@ class Remote {
     connect(){
         this.UART.connect((c) => {
             if(!c) throw "Error! Could not connect to device";
+            // clear REPL
+            c.write("\x03");
             this.connection = c;
         })
         this.connected = true;
@@ -44,7 +46,7 @@ class Remote {
      * Resets device removing currently stored code
      */
     reset() {
-
+        if(!this.connected) throw "Error! Device not connected!";
         this.connection.write("reset();\n");
     }
 
@@ -61,14 +63,19 @@ class Remote {
      * 
      * @returns true if code was uploaded succesfully
      */
-    checkFlag() {
-        let flag = true;
-        let dump;
-        UART.eval('dump();\n', (data) => {
-            dump = data;
-        });
-        console.log(dump);
-        return flag;
+    checkStatus() {
+        let val = Math.floor(Math.random(1000));
+        let ret = -1;
+        let code = `function green(){return '${val}';}\n`;
+        this.connection.write(code);
+        // This is not ideal; launches a second connection
+        this.UART.eval('green()', function(t) {
+            ret = t;
+          });
+        if(ret == val){
+            return true;
+        }
+        return false;
     }
-
 }
+
