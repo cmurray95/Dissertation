@@ -1,60 +1,25 @@
-let connection;
+let connection = new Remote(UART);
 
-/**
- * Connect to device 
- */
 function connect(){
-    UART.connect((c) => {
-        if(!c) throw "Error! Could not connect to device";
-        connection = c;
-    })
+    connection.connect();
 }
 
-/**
- * 
- * @param {String} url link to raw github file containing code.
- * @returns promise containing code as a string
- */
-async function getRawCode(url){
-    const res = await fetch(url);
-    let data = await res.text();
-    data = data + "\n";
-    return data;
+let url = document.getElementById("url").value;
+
+function upload(){
+    connection.upload(url);
 }
 
-/**
- * Upload code retrieved from URL
- */
-function upload() {
-    let url = document.getElementById("url").value;
-    let code = getRawCode(url);
-    code.then((raw) => {
-        reset();
-        connection.write(raw);
-    });
-    // flag test
-    //connection.write("function test(){Puck.getTemperature();}");
+function reset() {
+    connection.reset();
 }
 
-/**
- * Resets device removing currently stored code
- */
-function reset(){
-    connection.write("reset();\n");
+function disc() {
+    connection.disconnect();
 }
 
-/**
- * 
- * @returns true if code was uploaded succesfully
- */
- function checkFlag() {
-    let flag = true;
-    let dump;
-    UART.eval('dump();\n', (data) => {
-        dump = data;
-    });
-    console.log(dump);
-    return flag;
+function test() {
+    connection.checkFlag();
 }
 
 

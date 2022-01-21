@@ -16,7 +16,6 @@
 # Week 2
 
 ### 06 Oct 2021
-
 * *1 hour* Started presentation for next supervisor meeting
 * *2 hours* Setup linux environment for development 
 
@@ -146,5 +145,6 @@
 
 # Week 14 #
 ### 20 Jan 2022
-* *1 hours* Refactored demo
+ * *1 hours* Attempted to get interactive demo working
+ * *2 hours* Began refactoring uploader to make use of ES6 Classes
 

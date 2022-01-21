@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="uart.js"></script>
-    <script src="https://www.puck-js.com/puck.js"></script>
     <script src="script.js"></script>
     <title>Puck Demo</title>
 </head>
 <body>
-    <button onclick="green()">Green</button>
+    <button onclick="ledOn(1)">Red</button>
+    <button onclick="ledOn(2)">Green</button>
+    <button onclick="ledOn(3)">Blue</button>
+    <button onclick="ledOff()">Off</button>
+    <button onclick="printStatus()">Status</button>
+    <button onclick="accel()">Accel</button>
+    <button onclick="reset()">Reset</button>
     <span id="status"></span>
 </body>
 </html>
