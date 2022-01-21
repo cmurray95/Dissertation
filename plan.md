@@ -49,8 +49,13 @@ Week-by-week plan for the whole project. Update this as you go along.
 ## Spring Semester
 
 * **Week 13**
+- Finish demonstration
+- Present demonstration
 * **Week 14**
+- Present Demonstration
+- Refactor code 
 * **Week 15**
+- Publish Node.js package
 * **Week 16**
 * **Week 17**
 * **Week 19**

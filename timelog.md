@@ -124,5 +124,27 @@
 * *0.5 hours* Supervisor meeting
 
 # Winter Break # 
-### 02 Jan 2021
+### 02 Jan 2022
+* *2 hours* Researched UML diagrams to refresh knowledge
 * *1 hours* Created sequence diagram showing example worfklow of uploader
+
+### 06 Jan 2022
+* *1 hours* Wrote abstract for dissertation
+* *1 hours* Wrote draft plan for dissertation topics/discussion points
+
+### 8 Jan 2022
+* *2 hours* drafted ideas for demo project
+* *2 hours* Created demo project for demonstrating uploader
+
+# Week 13 #
+### 14 Jan 2022
+* *0.5 hours* Supervisor Meeting
+* *3 hours* Attempted to debug issues with puck device
+
+### 15 Jan 2022
+* *2 hours* Continued fixing hardware issues
+
+# Week 14 #
+### 20 Jan 2022
+* *1 hours* Refactored demo
+

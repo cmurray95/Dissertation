@@ -1,4 +1,4 @@
-1# 17/12/2021 #
+# 17/12/2021 #
 # Progress
 - Couldn't get the flag to work to confirm upload - kept having issues running functions from the device using UART (i believe UART.eval should work - but the data i get back doesn't) seem usable
 - Got demo ready to implement with the uploader once i figure out the flag issue
