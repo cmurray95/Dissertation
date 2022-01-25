@@ -152,8 +152,13 @@
 * *3 hours* Attempted to implement UART.eval() and UART.write() under a single connection, to no success
 
 # Week 15 #
-### 24 Jan 2022#
+### 24 Jan 2022
 * *1 hours* Got uploader to work using a single connection
 * *4 hours* Finally fixed the status checker. program now properly detects when code has finished uploading!
 * *1 hours* refactored code
+
+### 25 Jan 2022
+* *0.5 hours* refactored folder structure and code further
+* *1 hours* seperated demos
+
 
