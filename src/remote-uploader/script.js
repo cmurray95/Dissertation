@@ -50,7 +50,7 @@ function interactive() {
     let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/remote-uploader/src/demos/colour-test.js"
     connection.upload(url).then(result => {
         if(result){
-            alert("Upload succesful!");
+            window.location.replace("https://cmurray95.github.io/Dissertation/src/demos/colour-test.html");
         } else {
             alert("Upload failed!");
         }
