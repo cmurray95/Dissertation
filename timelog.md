@@ -155,4 +155,5 @@
 ### 24 Jan 2022#
 * *1 hours* Got uploader to work using a single connection
 * *4 hours* Finally fixed the status checker. program now properly detects when code has finished uploading!
+* *1 hours* refactored code
 

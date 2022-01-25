@@ -7,7 +7,13 @@ function connect(){
 let url = document.getElementById("url").value;
 
 function upload(){
-    connection.upload(url);
+    connection.upload(url).then(result => {
+        if(result){
+            alert("Upload succesful!");
+        } else {
+            alert("Upload failed!");
+        }
+    })
 }
 
 function reset() {

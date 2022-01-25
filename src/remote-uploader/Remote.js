@@ -23,40 +23,27 @@ class Remote {
 
     /**
      * 
-     * @param {String} url link to raw github file containing code.
-     * @returns promise containing code as a string
-     */
-    async #getRawCode(url) {
-        const res = await fetch(url);
-        let data = await  res.text();
-        data = data + "\n";
-        return data;
-    }
-
-    /**
-     * 
      * @param {String} url link containing code to be uploaded 
+     * @returns promise indicating if upload was succesful
      */
-    upload(url) {
+    async upload(url) {
         //if(!this.connected) throw "Error! Device not connected!";
         let code = this.#getRawCode(url);
         code.then((raw) => {
             reset();
             this.UART.write(raw);
         });
-        this.#checkStatus().then(result => {
-            if(result) {
-                alert("Upload complete!");
-            } else {
-                alert("Upload failed!");
-            }
-        })
+        let success = false;
+        await this.#checkStatus().then(result => {
+            success = result;
+        });
+        return success;
     }
 
     /**
      * Resets device removing currently stored code
      */
-    reset() {
+     reset() {
         //if(!this.connected) throw "Error! Device not connected!";
         this.UART.write("reset();\n");
     }
@@ -65,9 +52,21 @@ class Remote {
      * Disconnect device
      */
     disconnect() {
-        if(!this.connected) throw "Error! Device not connected!";
+        //if(!this.connected) throw "Error! Device not connected!";
         this.UART.close();
         this.connected = false;
+    }
+
+    /**
+     * 
+     * @param {String} url link to raw github file containing code.
+     * @returns promise containing code as a string
+     */
+     async #getRawCode(url) {
+        const res = await fetch(url);
+        let data = await  res.text();
+        data = data + "\n";
+        return data;
     }
 
     /**
