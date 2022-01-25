@@ -1,12 +1,11 @@
 # Tuesday 25th Jan
-# Experiment with UART.eval()
+# Add error handling
 # Upload demo to github pages and post to teams
 # post diagrams to teams
 # Wireframe dashboard app
 # Refactor Codebase
 
 # Implement file download 
-# Implement flag for checking upload status
 # Check URL for 404 before uploading
 # Publish App
 

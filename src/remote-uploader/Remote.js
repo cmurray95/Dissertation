@@ -4,6 +4,7 @@ class Remote {
         this.connected = false;
         this.connection;
     }
+
     /**
      * Connect to device 
      */
@@ -15,6 +16,7 @@ class Remote {
         //     this.connection = c;
         // })
         // this.connected = true;
+
         // Initialize connect and clear REPL
         this.UART.write("\x03");
     }
@@ -41,6 +43,13 @@ class Remote {
         code.then((raw) => {
             reset();
             this.UART.write(raw);
+        });
+        this.#checkStatus().then(result => {
+            if(result) {
+                alert("Upload complete!");
+            } else {
+                alert("Upload failed!");
+            }
         })
     }
 
@@ -86,7 +95,7 @@ class Remote {
      * Check if code upload succeeded
      * @returns true if code was uploaded succesfully
      */
-    async checkStatus() {
+    async #checkStatus() {
         this.#writeStatus();
         // comparator
         let cmp = -1;
