@@ -6,6 +6,9 @@
 # Discussion
 - Uploader works in terms of pulling remote code, and sending to device, and alerting user when upload is finished. however, carrying that over to a seperate page with which the user can interact with the device doesn't seem to be possible based on what i know so far
 # Guidance #
-- 
+- Try writing code using eval instead of write()
 # Goals #
-- 
+- Upload demo to github pages
+- Upload images
+- Try to fix alert
+- FInish demo

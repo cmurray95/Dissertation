@@ -1,3 +1,10 @@
+# Tuesday 25th Jan
+# Experiment with UART.eval()
+# Upload demo to github pages and post to teams
+# post diagrams to teams
+# Wireframe dashboard app
+# Refactor Codebase
+
 # Implement file download 
 # Implement flag for checking upload status
 # Check URL for 404 before uploading
@@ -6,5 +13,4 @@
 
 # Demo Ideas:
 ## Smart meter
-## Light controller (integrated using pixl + philip hue API)
-# Test application built using uploader
+## Online "dashboard" for collating espruino programs that can be easily downloaded and uploaded via remote uploader

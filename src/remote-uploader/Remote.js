@@ -8,13 +8,15 @@ class Remote {
      * Connect to device 
      */
     connect(){
-        this.UART.connect((c) => {
-            if(!c) throw "Error! Could not connect to device";
-            // clear REPL
-            c.write("\x03");
-            this.connection = c;
-        })
-        this.connected = true;
+        // this.UART.connect((c) => {
+        //     if(!c) throw "Error! Could not connect to device";
+        //     // clear REPL
+        //     c.write("\x03");
+        //     this.connection = c;
+        // })
+        // this.connected = true;
+        // Initialize connect and clear REPL
+        this.UART.write("\x03");
     }
 
     /**
@@ -34,11 +36,11 @@ class Remote {
      * @param {String} url link containing code to be uploaded 
      */
     upload(url) {
-        if(!this.connected) throw "Error! Device not connected!";
+        //if(!this.connected) throw "Error! Device not connected!";
         let code = this.#getRawCode(url);
         code.then((raw) => {
             reset();
-            this.connection.write(raw);
+            this.UART.write(raw);
         })
     }
 
@@ -46,8 +48,8 @@ class Remote {
      * Resets device removing currently stored code
      */
     reset() {
-        if(!this.connected) throw "Error! Device not connected!";
-        this.connection.write("reset();\n");
+        //if(!this.connected) throw "Error! Device not connected!";
+        this.UART.write("reset();\n");
     }
 
     /**
@@ -55,27 +57,39 @@ class Remote {
      */
     disconnect() {
         if(!this.connected) throw "Error! Device not connected!";
-        this.connection.close();
+        this.UART.close();
         this.connected = false;
     }
 
     /**
-     * 
+     * Delay execution
+     * @param {Timer} ms 
+     * @returns 
+     */
+    #halt(ms) {
+        return new Promise(res => setTimeout(res, ms));
+      }
+    
+    /**
+     * Check if code upload succeeded
      * @returns true if code was uploaded succesfully
      */
-    checkStatus() {
-        let val = Math.floor(Math.random(1000));
+    async checkStatus() {
+        // Generate checksum
+        let val = Math.floor(Math.random(100));
+        let flag = false;
         let ret = -1;
-        let code = `function green(){return '${val}';}\n`;
-        this.connection.write(code);
-        // This is not ideal; launches a second connection
-        this.UART.eval('green()', function(t) {
+        let code = `function check(){return '${val}';}\n`;
+        this.UART.write(code);
+        this.UART.eval('check()', (t) => {
             ret = t;
           });
+        // Wait for eval to finish
+        await this.#halt(2000);
         if(ret == val){
-            return true;
+            flag = true;
         }
-        return false;
+        return flag;
     }
 }
 

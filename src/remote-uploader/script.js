@@ -19,7 +19,9 @@ function disc() {
 }
 
 function test() {
-    console.log(connection.checkStatus());
+    connection.checkStatus().then(data => {
+        console.log(data);
+    });
 }
 
 
