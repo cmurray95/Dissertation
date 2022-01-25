@@ -18,10 +18,15 @@ function disc() {
     connection.disconnect();
 }
 
-function test() {
-    connection.checkStatus().then(data => {
-        console.log(data);
-    });
-}
+// function test() {
+//     connection.checkStatus().then(result => {
+//         console.log(result);
+//         if(result) {
+//             alert("Upload complete!");
+//         } else {
+//             alert("Upload failed!");
+//         }
+//     });
+// }
 
 

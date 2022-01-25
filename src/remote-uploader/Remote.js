@@ -69,27 +69,34 @@ class Remote {
     #halt(ms) {
         return new Promise(res => setTimeout(res, ms));
       }
-    
+
+    /**
+     * Write checksum to device
+     * @returns checksum
+     */
+    #writeStatus() {
+        // Generate checksum
+        let val = Math.floor(Math.random(100));
+        let code = `function check(){return '${val}';}\n`;
+        this.UART.write(code);
+        return val;
+    }
+
     /**
      * Check if code upload succeeded
      * @returns true if code was uploaded succesfully
      */
     async checkStatus() {
-        // Generate checksum
-        let val = Math.floor(Math.random(100));
-        let flag = false;
-        let ret = -1;
-        let code = `function check(){return '${val}';}\n`;
-        this.UART.write(code);
+        this.#writeStatus();
+        // comparator
+        let cmp = -1;
+        let checksum = this.#writeStatus();
         this.UART.eval('check()', (t) => {
-            ret = t;
+            cmp = t;
           });
         // Wait for eval to finish
         await this.#halt(2000);
-        if(ret == val){
-            flag = true;
-        }
-        return flag;
+        return cmp == checksum;
     }
 }
 
