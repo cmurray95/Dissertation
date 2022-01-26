@@ -1,18 +1,12 @@
-# Tuesday 25th Jan
+# Tuesday 25th Jan - Friday 28th Jan
 # checksum generator algorithm
 # Add error handling
-# Upload demo to github pages and post to teams
 # post diagrams to teams
 # Wireframe dashboard app
 # Refactor Codebase
-
 # Implement file download 
 # Check URL for 404 before uploading
-# Publish App
-
-Write color functions
-Website connects
-Eval(color)
+# Publish App on NPM
 
 
 # Demo Ideas:

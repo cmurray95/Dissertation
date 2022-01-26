@@ -160,5 +160,7 @@
 ### 25 Jan 2022
 * *0.5 hours* refactored folder structure and code further
 * *1 hours* seperated demos
+* *1 hours* Published code to github pages and sent demo to supervisor
 
-
+### 26 jan 2022
+* *1 hours* Fixed a few bugs

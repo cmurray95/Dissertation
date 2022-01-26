@@ -4,9 +4,8 @@ function connect(){
     connection.connect();
 }
 
-let url = document.getElementById("url").value;
-
 function upload(){
+    let url = document.getElementById("url").value;
     connection.upload(url).then(result => {
         if(result){
             alert("Upload succesful!");
@@ -22,17 +21,6 @@ function reset() {
 
 function disc() {
     connection.disconnect();
-}
-
-function test() {
-        // connection.checkStatus().then(result => {
-        //     console.log(result);
-        //     if(result) {
-        //         alert("Upload complete!");
-        //     } else {
-        //         alert("Upload failed!");
-        //     }
-        // });
 }
 
 function static() {
@@ -56,3 +44,15 @@ function interactive() {
         }
     })
 }
+
+function bangle_demo() {
+    let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/remote-uploader/src/demos/bangle-test.js"
+    connection.upload(url).then(result => {
+        if(result){
+            alert("Upload succesful!");
+        } else {
+            alert("Upload failed!");
+        }
+    })
+}
+

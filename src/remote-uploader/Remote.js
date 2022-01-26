@@ -84,7 +84,7 @@ class Remote {
      */
     #writeStatus() {
         // Generate checksum
-        let val = Math.floor(Math.random(100));
+        let val = Math.floor(Math.random() * 100);
         let code = `function check(){return '${val}';}\n`;
         this.UART.write(code);
         return val;
