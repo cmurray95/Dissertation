@@ -9,29 +9,31 @@ class Remote {
      * Connect to device 
      */
     connect(){
-        // this.UART.connect((c) => {
-        //     if(!c) throw "Error! Could not connect to device";
-        //     // clear REPL
-        //     c.write("\x03");
-        //     this.connection = c;
-        // })
-        // this.connected = true;
-
         // Initialize connect and clear REPL
-        this.UART.write("\x03");
+        this.UART.write("\x03", (err) => {
+            if(!err){
+                this.connected = true;
+            }
+        });
     }
 
     /**
      * 
      * @param {String} url link containing code to be uploaded 
+     * @param {Boolean} flash Chooses which memory to write to
      * @returns promise indicating if upload was succesful
      */
-    async upload(url) {
-        //if(!this.connected) throw "Error! Device not connected!";
+    async upload(url, flash) {
+        if(!this.connected) throw Error("Device not connected!");
         let code = this.#getRawCode(url);
         code.then((raw) => {
-            reset();
-            this.UART.write(raw);
+            if(!flash){
+                reset();
+                this.UART.write(raw);
+            } else {
+                this.UART.write(raw);
+                this.UART.write("save();\n");
+            }
         });
         let success = false;
         await this.#checkStatus().then(result => {
@@ -44,7 +46,7 @@ class Remote {
      * Resets device removing currently stored code
      */
      reset() {
-        //if(!this.connected) throw "Error! Device not connected!";
+        if(!this.connected) throw Error("Device not connected!");
         this.UART.write("reset();\n");
     }
 
@@ -52,7 +54,7 @@ class Remote {
      * Disconnect device
      */
     disconnect() {
-        //if(!this.connected) throw "Error! Device not connected!";
+        if(!this.connected) throw Error("Device not connected!");
         this.UART.close();
         this.connected = false;
     }
@@ -63,7 +65,12 @@ class Remote {
      * @returns promise containing code as a string
      */
      async #getRawCode(url) {
-        const res = await fetch(url);
+        const res = fetch(url).then((status) => {
+            // Ensure url is valid
+            if(!status.ok){
+                throw Error(status.statusText);
+            }
+        });
         let data = await  res.text();
         data = data + "\n";
         return data;
@@ -105,6 +112,18 @@ class Remote {
         // Wait for eval to finish
         await this.#halt(2000);
         return cmp == checksum;
+    }
+
+    async dump() {
+        let str = "";
+        await this.UART.eval('dump();', (t,err) => {
+            if(!t){
+                console.log(err);
+                return;
+            }
+            str = t;
+          }); 
+        return str;
     }
 }
 

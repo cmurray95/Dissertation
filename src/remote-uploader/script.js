@@ -25,12 +25,29 @@ function disc() {
 
 function static() {
     let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/remote-uploader/src/demos/accel-test.js"
-    connection.upload(url).then(result => {
+    connection.upload(url,0).then(result => {
         if(result){
             alert("Upload succesful!");
         } else {
             alert("Upload failed!");
         }
+    })
+}
+
+function staticFlash() {
+    let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/remote-uploader/src/demos/accel-test.js"
+    connection.upload(url,1).then(result => {
+        if(result){
+            alert("Upload succesful!");
+        } else {
+            alert("Upload failed!");
+        }
+    })
+}
+
+function dump(){
+    connection.dump().then((result) => {
+       // console.log(result);
     })
 }
 

@@ -164,3 +164,7 @@
 
 ### 26 jan 2022
 * *1 hours* Fixed a few bugs
+
+### 28 Jan 2022
+* *0.5 hours* Supervisor meeting
+* *2 hours* Fixed error handling
