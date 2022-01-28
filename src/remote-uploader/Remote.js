@@ -116,13 +116,14 @@ class Remote {
 
     async dump() {
         let str = "";
-        await this.UART.eval('dump();', (t,err) => {
+        this.UART.eval('E.dumpStr()', (t,err) => {
             if(!t){
                 console.log(err);
                 return;
             }
             str = t;
           }); 
+        await this.#halt(500);
         return str;
     }
 }

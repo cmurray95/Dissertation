@@ -47,7 +47,7 @@ function staticFlash() {
 
 function dump(){
     connection.dump().then((result) => {
-       // console.log(result);
+        console.log(result);
     })
 }
 
