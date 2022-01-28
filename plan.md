@@ -57,6 +57,11 @@ Week-by-week plan for the whole project. Update this as you go along.
 * **Week 15**
 - Publish Node.js package
 * **Week 16**
+- Start writing dissertation
+- - Finish abstract
+- - Sort diagrams/plan
+- Wireframes for site
+- Plan "user study"
 * **Week 17**
 * **Week 19**
 * **Week 20**

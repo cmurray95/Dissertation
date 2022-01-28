@@ -14,6 +14,9 @@ class Remote {
             if(!err){
                 this.connected = true;
             }
+            else {
+                throw Error(err);
+            }
         });
     }
 
@@ -24,9 +27,10 @@ class Remote {
      * @returns promise indicating if upload was succesful
      */
     async upload(url, flash) {
-        if(!this.connected) throw Error("Device not connected!");
-        let code = this.#getRawCode(url);
-        code.then((raw) => {
+        if(!this.connected) {
+            connect();
+        };
+        this.#getRawCode(url).then((raw) => {
             if(!flash){
                 reset();
                 this.UART.write(raw);
@@ -46,7 +50,9 @@ class Remote {
      * Resets device removing currently stored code
      */
      reset() {
-        if(!this.connected) throw Error("Device not connected!");
+        if(!this.connected) {
+            connect();
+        };
         this.UART.write("reset();\n");
     }
 
@@ -54,9 +60,30 @@ class Remote {
      * Disconnect device
      */
     disconnect() {
-        if(!this.connected) throw Error("Device not connected!");
+        if(!this.connected) {
+            connect();
+        };
         this.UART.close();
         this.connected = false;
+    }
+
+    /**
+     * 
+     * @returns code stored on device
+     */
+    async dump() {
+        if(!this.connected) {
+            connect();
+        };
+        let str = "";
+        this.UART.eval('E.dumpStr()', (t,err) => {
+            if(err){
+                throw Error(err);
+            }
+            str = t;
+          }); 
+        await this.#halt(500);
+        return str;
     }
 
     /**
@@ -65,13 +92,14 @@ class Remote {
      * @returns promise containing code as a string
      */
      async #getRawCode(url) {
-        const res = fetch(url).then((status) => {
+        const res = await fetch(url).then((response) => {
             // Ensure url is valid
-            if(!status.ok){
-                throw Error(status.statusText);
+            if(!response.ok){
+                throw Error(response.status);
             }
+            return response;
         });
-        let data = await  res.text();
+        let data = await res.text();
         data = data + "\n";
         return data;
     }
@@ -106,25 +134,15 @@ class Remote {
         // comparator
         let cmp = -1;
         let checksum = this.#writeStatus();
-        this.UART.eval('check()', (t) => {
+        this.UART.eval('check()', (t,err) => {
+            if(err){
+                throw Error(err);
+            }
             cmp = t;
           });
         // Wait for eval to finish
         await this.#halt(2000);
         return cmp == checksum;
-    }
-
-    async dump() {
-        let str = "";
-        this.UART.eval('E.dumpStr()', (t,err) => {
-            if(!t){
-                console.log(err);
-                return;
-            }
-            str = t;
-          }); 
-        await this.#halt(500);
-        return str;
     }
 }
 

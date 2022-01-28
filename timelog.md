@@ -168,4 +168,5 @@
 ### 28 Jan 2022
 * *0.5 hours* Supervisor meeting
 * *1 hours* Fixed error handling
-* *1 hours* 
+* *1.5 hours* Got dump() to work succesfully
+* *1 hours* Various bugfixes 
