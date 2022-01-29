@@ -36,6 +36,7 @@ class Remote {
                 this.UART.write(raw);
             } else {
                 this.UART.write(raw);
+                // Write to flash memory
                 this.UART.write("save();\n");
             }
         });
@@ -76,13 +77,14 @@ class Remote {
             connect();
         };
         let str = "";
+        // Retrieve code stored on device
         this.UART.eval('E.dumpStr()', (t,err) => {
             if(err){
                 throw Error(err);
             }
             str = t;
           }); 
-        await this.#halt(500);
+        await this.#halt(2000);
         return str;
     }
 
@@ -95,10 +97,14 @@ class Remote {
         const res = await fetch(url).then((response) => {
             // Ensure url is valid
             if(!response.ok){
-                throw Error(response.status);
+                throw new Error(response.status);
             }
             return response;
         });
+        // Fetch failed
+        if(!res){
+            throw new Error("Fetch failed!");
+        }
         let data = await res.text();
         data = data + "\n";
         return data;
@@ -132,14 +138,14 @@ class Remote {
     async #checkStatus() {
         this.#writeStatus();
         // comparator
-        let cmp = -1;
+        let cmp;
         let checksum = this.#writeStatus();
         this.UART.eval('check()', (t,err) => {
             if(err){
                 throw Error(err);
             }
             cmp = t;
-          });
+        });
         // Wait for eval to finish
         await this.#halt(2000);
         return cmp == checksum;
