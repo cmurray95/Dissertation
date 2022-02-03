@@ -23,6 +23,12 @@ function disc() {
     connection.disconnect();
 }
 
+function data() {
+    connection.getDeviceType().then(result => {
+        console.log(result);
+    })
+}
+
 function static() {
     let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/remote-uploader/src/demos/accel-test.js"
     connection.upload(url,0).then(result => {

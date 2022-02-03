@@ -170,3 +170,10 @@
 * *1 hours* Fixed error handling
 * *1.5 hours* Got dump() to work succesfully
 * *1 hours* Various bugfixes 
+
+### 29 Jan 2022
+* *1 hours* Even more errorhandling/fixes
+
+# Week 16 # 
+* *1 hours* Researched methods for logging data directly on device
+* *1 hours* Added functionality for retrieving device type, and planned further demos

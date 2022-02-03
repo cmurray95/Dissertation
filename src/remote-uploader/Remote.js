@@ -70,6 +70,24 @@ class Remote {
 
     /**
      * 
+     * @returns String containing device name
+     */
+    async getDeviceType(){
+        if(!this.connected){
+            connect();
+        }
+        let device = ""
+        this.UART.eval('process.env.BOARD', (d) => {
+            if(d){
+                device = d;
+            }
+        });
+        await this.#halt(200);
+        return device;
+    }
+
+    /**
+     * 
      * @returns code stored on device
      */
     async dump() {
@@ -84,7 +102,7 @@ class Remote {
             }
             str = t;
           }); 
-        await this.#halt(2000);
+        await this.#halt(5000);
         return str;
     }
 

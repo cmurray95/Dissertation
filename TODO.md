@@ -5,6 +5,15 @@
 # Refactor Codebase 
 # Publish App on NPM
 
+# State Diagram for remote object
+# Flowchart for code comparison
+- - Retrieve code from remote source
+- - Generate checksum
+- - Retrieve code from device
+- - Compare
+- - If different, upload
+- - If same, skip upload
+- - Load interactive elements
 
 # Demo Ideas:
 ## Smart meter
