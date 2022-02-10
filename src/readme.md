@@ -1,6 +1,6 @@
 # Readme
 
-Put a brief description of your code here. This should at least describe the file structure.
+The remote uploader script can be found within remote.js and can be imported into any web project. The uploader can also be installed as a NPM package.
 
 ## Build instructions
 
