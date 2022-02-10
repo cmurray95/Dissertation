@@ -5,8 +5,6 @@
 - Publish as package
 - Checksum comparison
 
-
-# checksum generator algorithm
 # post diagrams to teams
 # Wireframe dashboard app
 # Refactor Codebase 
