@@ -32,7 +32,7 @@ class Remote {
         };
         this.#getRawCode(url).then((raw) => {
             if(!flash){
-                this.reset();
+                this.reset()
                 this.UART.write(raw);
             } else {
                 this.UART.write(raw);
@@ -92,7 +92,7 @@ class Remote {
      */
     async dump() {
         if(!this.connected) {
-            connect();
+            this.connect();
         };
         let str = "";
         // Retrieve code stored on device
