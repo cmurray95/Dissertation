@@ -61,8 +61,10 @@ Week-by-week plan for the whole project. Update this as you go along.
 - - Finish abstract
 - - Sort diagrams/plan
 - Wireframes for site
-- Plan "user study"
 * **Week 17**
+- Fix NPM issues
+- Dissertation writeup
+- 
 * **Week 19**
 * **Week 20**
 * **Week 21**

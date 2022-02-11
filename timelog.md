@@ -175,5 +175,12 @@
 * *1 hours* Even more errorhandling/fixes
 
 # Week 16 # 
+### 3 Feb 2022
 * *1 hours* Researched methods for logging data directly on device
 * *1 hours* Added functionality for retrieving device type, and planned further demos
+
+# Week 17 #
+### 10 Feb 2022
+* *3 hours* Tried to get uploader published as NPM script
+* *0.5 hours* pixl.js demo for meeting
+* *2 hours* Researching distribution methods for javascript libraries 
