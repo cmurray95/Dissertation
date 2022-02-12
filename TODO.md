@@ -1,6 +1,7 @@
-# Monday 7th Feb
-- Pixl demo
-## New branch
+# saturday 7th Feb
+- fix Pixl demo
+
+## New repo
 - Install Node.js
 - Publish as package
 - Checksum comparison

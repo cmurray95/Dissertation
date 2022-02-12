@@ -64,6 +64,8 @@ Week-by-week plan for the whole project. Update this as you go along.
 * **Week 17**
 - Fix NPM issues
 - Dissertation writeup
+* **Week 18**
+- 
 - 
 * **Week 19**
 * **Week 20**
