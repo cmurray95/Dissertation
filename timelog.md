@@ -184,3 +184,7 @@
 * *3 hours* Tried to get uploader published as NPM script
 * *0.5 hours* pixl.js demo for meeting
 * *2 hours* Researching distribution methods for javascript libraries 
+
+### 11 Feb 2022
+* *0.5 hours* supervisor meeting
+* *
