@@ -65,9 +65,12 @@ Week-by-week plan for the whole project. Update this as you go along.
 - Fix NPM issues
 - Dissertation writeup
 * **Week 18**
-- 
-- 
+- Diagnose pixl.js issue
 * **Week 19**
+- Continue writing dissertation
+- setup webpack
+- setup continous integration for npm package
+- publish documentation
 * **Week 20**
 * **Week 21**
 * **Week 22**

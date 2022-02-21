@@ -8,9 +8,9 @@ function upload(){
     let url = document.getElementById("url").value;
     connection.upload(url).then(result => {
         if(result){
-            alert("Upload succesful!");
+            document.getElementById("status").innerHTML = 'success!';
         } else {
-            alert("Upload failed!");
+            document.getElementById("status").innerHTML = 'failed!';
         }
     })
 }
@@ -33,9 +33,9 @@ function static() {
     let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/remote-uploader/src/demos/accel-test.js"
     connection.upload(url,0).then(result => {
         if(result){
-            alert("Upload succesful!");
+            document.getElementById("status").innerHTML = 'success!';
         } else {
-            alert("Upload failed!");
+            document.getElementById("status").innerHTML = 'failed!';
         }
     })
 }
@@ -44,9 +44,9 @@ function staticFlash() {
     let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/remote-uploader/src/demos/accel-test.js"
     connection.upload(url,1).then(result => {
         if(result){
-            alert("Upload succesful!");
+            document.getElementById("status").innerHTML = 'success!';
         } else {
-            alert("Upload failed!");
+            document.getElementById("status").innerHTML = 'failed!';
         }
     })
 }
@@ -72,9 +72,9 @@ function bangle_demo() {
     let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/remote-uploader/src/demos/bangle-test.js"
     connection.upload(url).then(result => {
         if(result){
-            alert("Upload succesful!");
+            document.getElementById("status").innerHTML = 'success!';
         } else {
-            alert("Upload failed!");
+            document.getElementById("status").innerHTML = 'failed!';
         }
     })
 }

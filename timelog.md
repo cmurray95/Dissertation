@@ -188,3 +188,13 @@
 ### 11 Feb 2022
 * *0.5 hours* supervisor meeting
 
+# Week 18 #
+### 16 Feb 2022
+* *2 hours* Ran various tests to try and identify the issue with uploading code to pixl devices
+### 17 Feb 2022
+* *1 hours* Used uploader to upload multiple programs to the puck/bangle in an attempt to recreate the bug found with the pixl js code
+
+# Week 19 #
+### 21 Feb 2022
+* *2 hours* Published mock NPM package to test continuous integration methods
+* *1 hours* Researched Web BLE security issues for dissertation
