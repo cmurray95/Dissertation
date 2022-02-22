@@ -198,3 +198,6 @@
 ### 21 Feb 2022
 * *2 hours* Published mock NPM package to test continuous integration methods
 * *1 hours* Researched Web BLE security issues for dissertation
+
+### 22 Feb 2022
+* *2 hours* Fixed issue where code was not correctly saving to flash memory

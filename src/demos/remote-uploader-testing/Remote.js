@@ -35,9 +35,12 @@ class Remote {
                 reset();
                 this.UART.write(raw);
             } else {
-                this.UART.write(raw);
-                // Write to flash memory
-                this.UART.write("save();\n");
+                // Strip newlines
+                raw = raw.replace(/(\r\n|\n|\r)/gm, "")
+                // Write to Flash Storage
+                this.UART.write(`E.setBootCode("${raw}",1);\n`);
+                // Load into RAM
+                this.UART.write("load()\n");
             }
         });
         let success = false;
@@ -54,7 +57,7 @@ class Remote {
         if(!this.connected) {
             connect();
         };
-        this.UART.write("reset();\n");
+        this.UART.write("reset(true);\n");
     }
 
     /**
