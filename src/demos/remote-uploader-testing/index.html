@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="Remote.js"></script>
+    <script src="https://unpkg.com/blueimp-md5@2.19.0/js/md5.js"></script>
     <script src="uart.js"></script>
+    <script src="remote.js"></script>
     <title>Remote-Uploader</title>
 </head>
 <body onload="connect()">
@@ -20,6 +21,7 @@
 <button onclick="staticFlash()">Static Demo(Flash)</button>
 <button onclick="interactive()">Interactive Demo</button>
 <button onclick="bangle_demo()">Bangle Demo</button>
+<button onclick="bangle_flash_test()">Bangle Flash Demo</button>
 <div id="status"></div>
 <script src="script.js"></script>
 </body>

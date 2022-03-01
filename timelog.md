@@ -201,3 +201,20 @@
 
 ### 22 Feb 2022
 * *2 hours* Fixed issue where code was not correctly saving to flash memory
+
+### 23 Feb 2022
+* *1 hours* published to NPM
+* *1 hours* researched jekyll
+* *2 hours* Bugfixed hash comparison operation. Kept finding issues with code retrieval on device timing out browser
+
+### 25 Feb 2022
+* *2 hours* Researched unpkg issue. Cannot import script probably without browser complaining about linked modules
+* *0.5 hours* Supervisor Meeting
+* *1 hours* Updated documentation page
+
+### 27 Feb 2022
+* *3 hours* fixed unpkg issue. Got library working via CDN and script tag!
+
+# Week 20 #
+### 28 Feb 2022
+* *1 hours* fixed bug with MD5 checking

@@ -1,14 +1,11 @@
-# Post pixl demo update to teams
-# Push new repo for remote-uploader
-# Fix hash comparison
-# Add documentation page
+# Fix checker
+# Dashboard app
+# Finish documentation page
+# Start writing
+# Evaluation of times for code checking
+# Fix unpkg issues
 
-# post diagrams to teams
-# Wireframe dashboard app
-# Refactor Codebase 
-# Publish App on NPM
-
-## New repo
-- Install Node.js
-- Publish as package
-- Checksum comparison
+# Check device code
+# If same as upload code, return true
+# Else upload and use check flag
+ 

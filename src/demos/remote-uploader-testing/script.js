@@ -1,4 +1,4 @@
-let connection = new Remote(UART);
+let connection = new Remote();
 
 function connect(){
     connection.connect();
@@ -79,3 +79,13 @@ function bangle_demo() {
     })
 }
 
+function bangle_flash_test(){
+    let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/remote-uploader/src/demos/bangle-test.js"
+    connection.upload(url, true).then(result => {
+        if(result){
+            document.getElementById("status").innerHTML = 'success!';
+        } else {
+            document.getElementById("status").innerHTML = 'failed!';
+        }
+    })
+}

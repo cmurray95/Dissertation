@@ -1,10 +1,10 @@
 class Remote { 
-    constructor(UART){
+    constructor(){
         this.UART = UART;
         this.connected = false;
         this.connection;
     }
-
+    
     /**
      * Connect to device 
      */
@@ -19,22 +19,38 @@ class Remote {
             }
         });
     }
-
+  
     /**
      * 
      * @param {String} url link containing code to be uploaded 
-     * @param {Boolean} flash Chooses which memory to write to
+     * @param {Boolean} flash Chooses which memory to write to. Flash writing does not work on bangle.
      * @returns promise indicating if upload was succesful
      */
     async upload(url, flash) {
         if(!this.connected) {
             connect();
         };
-        this.#getRawCode(url).then((raw) => {
-            if(!flash){
+        // Force flash if bangle detected
+        await this.getDeviceType().then((res) =>{
+          if(res == "BANGLEJS"){
+            flash = false;
+          }
+        });
+        let success = false;
+        await this.#getRawCode(url).then((raw) => {
+          // Compare code on device with code to be uploaded
+            this.dump().then((res) => {
+              raw = raw.replace(/(\r\n|\n|\r)/gm, "")
+              res = res.split("// Code saved with E.setBootCode");
+              // If code exists on device already, skip upload process
+              if(md5(raw) == md5(res[1])){
+                success = true;
+              }
+            })
+            if(!flash && success != true){
                 reset();
                 this.UART.write(raw);
-            } else {
+            } else if(success != true) {
                 // Strip newlines
                 raw = raw.replace(/(\r\n|\n|\r)/gm, "")
                 // Write to Flash Storage
@@ -43,13 +59,12 @@ class Remote {
                 this.UART.write("load()\n");
             }
         });
-        let success = false;
         await this.#checkStatus().then(result => {
             success = result;
         });
         return success;
     }
-
+  
     /**
      * Resets device removing currently stored code
      */
@@ -59,7 +74,7 @@ class Remote {
         };
         this.UART.write("reset(true);\n");
     }
-
+  
     /**
      * Disconnect device
      */
@@ -70,7 +85,7 @@ class Remote {
         this.UART.close();
         this.connected = false;
     }
-
+  
     /**
      * 
      * @returns String containing device name
@@ -88,7 +103,7 @@ class Remote {
         await this.#halt(200);
         return device;
     }
-
+  
     /**
      * 
      * @returns code stored on device
@@ -108,7 +123,7 @@ class Remote {
         await this.#halt(5000);
         return str;
     }
-
+  
     /**
      * 
      * @param {String} url link to raw github file containing code.
@@ -130,7 +145,7 @@ class Remote {
         data = data + "\n";
         return data;
     }
-
+  
     /**
      * Delay execution
      * @param {Timer} ms 
@@ -139,7 +154,7 @@ class Remote {
     #halt(ms) {
         return new Promise(res => setTimeout(res, ms));
       }
-
+  
     /**
      * Write checksum to device
      * @returns checksum
@@ -151,7 +166,7 @@ class Remote {
         this.UART.write(code);
         return val;
     }
-
+  
     /**
      * Check if code upload succeeded
      * @returns true if code was uploaded succesfully
@@ -168,8 +183,8 @@ class Remote {
             cmp = t;
         });
         // Wait for eval to finish
-        await this.#halt(2000);
+        await this.#halt(5000);
         return cmp == checksum;
     }
-}
-
+  }
+  
