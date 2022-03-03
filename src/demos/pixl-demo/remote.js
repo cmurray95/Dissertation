@@ -38,7 +38,7 @@ class Remote {
         });
         let success = false;
         await this.#getRawCode(url).then((raw) => {
-          // Compare code on device with code to be uploaded
+            // Compare code on device with code to be uploaded
             this.dump().then((res) => {
               raw = raw.replace(/(\r\n|\n|\r)/gm, "")
               res = res.split("// Code saved with E.setBootCode");
