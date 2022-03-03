@@ -218,3 +218,7 @@
 # Week 20 #
 ### 28 Feb 2022
 * *1 hours* fixed bug with MD5 checking
+
+### 02 Mar 2022
+* *2 hours* diagnosed pixl.js issues
+* *1 hours* wireframed demo ideas

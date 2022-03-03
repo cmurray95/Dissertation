@@ -89,3 +89,15 @@ function bangle_flash_test(){
         }
     })
 }
+
+function bangle_flappy() {
+    // Bangle app credit to https://github.com/espruino/BangleApps/commits?author=adamschmalhofer
+    let url = "https://raw.githubusercontent.com/espruino/BangleApps/master/apps/flappy/app.js"
+    connection.upload(url).then(result => {
+        if(result){
+            document.getElementById("status").innerHTML = 'success!';
+        } else {
+            document.getElementById("status").innerHTML = 'failed!';
+        }
+    })
+}

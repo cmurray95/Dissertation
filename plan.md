@@ -72,6 +72,8 @@ Week-by-week plan for the whole project. Update this as you go along.
 - setup continous integration for npm package
 - publish documentation
 * **Week 20**
+- Fix pixl issues
+- Publish demo suite to documentation
 * **Week 21**
 * **Week 22**
 * **Week 23 [TERM ENDS]**
