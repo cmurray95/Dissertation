@@ -5,7 +5,7 @@ function connect(){
 }
 
 function upload() {
-    let url = "https://raw.githubusercontent.com/espruino/EspruinoDocs/master/examples/Dinosaur%20Game.js"
+    let url = "https://raw.githubusercontent.com/espruino/EspruinoApps/master/apps/trex/app.js"
     connection.upload(url,1).then(result => {
         if(result){
             document.getElementById("status").innerHTML = "Succesful!";

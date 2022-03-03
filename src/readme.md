@@ -1,41 +1,71 @@
-# Readme
+# espruino-remote-uploader
 
-The remote uploader script can be found within remote.js and can be imported into any web project. The uploader can also be installed as a NPM package.
+Allows for code to be uploaded remotely to Espruino hardware devices from a web browser.
 
-## Build instructions
+# Installation
 
-**You must** include the instructions necessary to build and deploy this project successfully. If appropriate, also include 
-instructions to run automated tests. 
+The package can be installed via npm using:
 
-### Requirements
+`npm i remote-uploader --save`
 
-List the all of the pre-requisites software required to set up your project (e.g. compilers, packages, libraries, OS, hardware)
+Alternatively, you can include the following script tag:
 
-For example:
+`<script src="https://unpkg.com/remote-uploader@2.0.0/dist/remote.min.js"></script>`
 
-* Python 3.7
-* Packages: listed in `requirements.txt` 
-* Tested on Windows 10
+# Usage
 
-or another example:
+To create a new connection:
 
-* Requires Raspberry Pi 3 
-* a Linux host machine with the `arm-none-eabi` toolchain (at least version `x.xx`) installed
-* a working LuaJIT installation > 2.1.0
+```
+let connection = new Remote();
+connection.connect();
+```
 
-### Build steps
+To upload code to a connected device:
 
-List the steps required to build software. 
+```
+connection.upload(url).then(result => {
+    if(result){
+        //...
+    } else {
+        //...
+    }
+})
+```
 
-Hopefully something simple like `pip install -e .` or `make` or `cd build; cmake ..`. In
-some cases you may have much more involved setup required.
+Additionally, you can specify true to upload code directly to flash storage (flash uploading does not work for bangle devices):
+```
+connection.upload(url,true).then(result => {
+    if(result){
+        //...
+    } else {
+        //...
+    }
+})
+```
 
-### Test steps
+Retrieve device type (E.g. pixl, bangle, puck):
+```
+connection.getDeviceType().then(result => {
+    //...
+})
+```
+You can retrieve code stored on the device using:
+```
+connection.dump().then((result) => {
+    //...
+})
+```
 
-List steps needed to show your software works. This might be running a test suite, or just starting the program; but something that could be used to verify your code is working correctly.
+To reset a connection:
 
-Examples:
+```
+connection.reset();
+```
 
-* Run automated tests by running `pytest`
-* Start the software by running `bin/editor.exe` and opening the file `examples/example_01.bin`
+Disconnect:
+
+```
+connection.disconnect();
+```
 
