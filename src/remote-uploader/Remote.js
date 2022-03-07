@@ -32,13 +32,13 @@ class Remote {
         };
         // Force flash if bangle detected
         await this.getDeviceType().then((res) =>{
-          if(res == "BANGLEJS"){
+          if(res == "BANGLEJS" || "PIXLJS"){
             flash = false;
           }
         });
         let success = false;
         await this.#getRawCode(url).then((raw) => {
-          // Compare code on device with code to be uploaded
+            // Compare code on device with code to be uploaded
             this.dump().then((res) => {
               raw = raw.replace(/(\r\n|\n|\r)/gm, "")
               res = res.split("// Code saved with E.setBootCode");
@@ -183,7 +183,7 @@ class Remote {
             cmp = t;
         });
         // Wait for eval to finish
-        await this.#halt(5000);
+        await this.#halt(8000);
         return cmp == checksum;
     }
   }

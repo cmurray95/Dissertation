@@ -28,17 +28,17 @@ class Remote {
      */
     async upload(url, flash) {
         if(!this.connected) {
-            connect();
+            this.connect();
         };
         // Force flash if bangle detected
         await this.getDeviceType().then((res) =>{
-          if(res == "BANGLEJS"){
+          if(res == "BANGLEJS" || "PIXLJS"){
             flash = false;
           }
         });
         let success = false;
         await this.#getRawCode(url).then((raw) => {
-          // Compare code on device with code to be uploaded
+            // Compare code on device with code to be uploaded
             this.dump().then((res) => {
               raw = raw.replace(/(\r\n|\n|\r)/gm, "")
               res = res.split("// Code saved with E.setBootCode");
@@ -48,7 +48,7 @@ class Remote {
               }
             })
             if(!flash && success != true){
-                reset();
+                this.reset();
                 this.UART.write(raw);
             } else if(success != true) {
                 // Strip newlines
@@ -70,7 +70,7 @@ class Remote {
      */
      reset() {
         if(!this.connected) {
-            connect();
+            this.connect();
         };
         this.UART.write("reset(true);\n");
     }
@@ -80,7 +80,7 @@ class Remote {
      */
     disconnect() {
         if(!this.connected) {
-            connect();
+            this.connect();
         };
         this.UART.close();
         this.connected = false;
@@ -92,7 +92,7 @@ class Remote {
      */
     async getDeviceType(){
         if(!this.connected){
-            connect();
+            this.connect();
         }
         let device = ""
         this.UART.eval('process.env.BOARD', (d) => {
@@ -110,7 +110,7 @@ class Remote {
      */
     async dump() {
         if(!this.connected) {
-            connect();
+            this.connect();
         };
         let str = "";
         // Retrieve code stored on device
@@ -183,7 +183,7 @@ class Remote {
             cmp = t;
         });
         // Wait for eval to finish
-        await this.#halt(5000);
+        await this.#halt(8000);
         return cmp == checksum;
     }
   }
