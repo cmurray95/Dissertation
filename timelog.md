@@ -222,3 +222,15 @@
 ### 02 Mar 2022
 * *2 hours* diagnosed pixl.js issues
 * *1 hours* wireframed demo ideas
+
+### 04 Mar 2022
+* *2 hours* forked dinosaur demo and made interactive with web browser
+* *0.5 hours* supervisor meeting
+* *1 hours* tidied up repository and demos
+
+# 05 Mar 2022
+* *1 hours* Setup jekyll site to practice for documentation pages
+
+# Week 21 #
+### 07 Mar 2022
+* *1.5 hours* fixed issues with interactive dinosaur demo

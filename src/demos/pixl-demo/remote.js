@@ -183,7 +183,7 @@ class Remote {
             cmp = t;
         });
         // Wait for eval to finish
-        await this.#halt(5000);
+        await this.#halt(8000);
         return cmp == checksum;
     }
   }

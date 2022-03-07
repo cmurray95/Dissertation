@@ -5,10 +5,10 @@ function connect(){
 }
 
 function upload() {
-    let url = "https://raw.githubusercontent.com/espruino/EspruinoApps/master/apps/trex/app.js"
+    let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/main/src/demos/pixl-demo/dinosaur_interactive.js"
     connection.upload(url,1).then(result => {
         if(result){
-            document.getElementById("status").innerHTML = "Succesful!";
+            window.location.replace("C:\\Users\\craig\\Documents\\Uni\\year 4\\Dissertation\\src\\demos\\pixl-demo\\dinosaur\\index.html");
         } else {
             document.getElementById("status").innerHTML = "Failed!";
         }
