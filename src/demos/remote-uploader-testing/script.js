@@ -63,7 +63,7 @@ function interactive() {
         if(result){
             window.location.replace("https://cmurray95.github.io/Dissertation/src/demos/colour-test.html");
         } else {
-            alert("Upload failed!");
+            document.getElementById("status").innerHTML = 'failed!';
         }
     })
 }

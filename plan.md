@@ -75,7 +75,8 @@ Week-by-week plan for the whole project. Update this as you go along.
 - Fix pixl issues
 - Publish demo suite to documentation
 * **Week 21**
+- Continue writing
+- Finish documentation
 * **Week 22**
 * **Week 23 [TERM ENDS]**
 * **Week 24** Dissertation submission deadline and presentations.
-
