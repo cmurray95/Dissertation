@@ -234,3 +234,10 @@
 # Week 21 #
 ### 07 Mar 2022
 * *1.5 hours* fixed issues with interactive dinosaur demo
+
+### 09 Mar 2022
+* *1.5 hours* planned user evaluation
+
+### 10 Mar 2022
+* *1.5 hours* Wrote up tutorial for documentation
+* *1 hours* Researched CSS libraries for improving the UI of the demo apps

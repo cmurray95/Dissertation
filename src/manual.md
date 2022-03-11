@@ -18,5 +18,5 @@
 - Returns promise containing the device type (e.g. PUCKJS or PIXLJS)
 
 ### dump()
-- Returns promising containing code currently stored within flash storage on the device
+- Returns promise containing code currently stored within flash storage on the device
 

@@ -4,5 +4,5 @@
 # Evaluation of times for code checking
 # Think of user evaluation
 # Fix flash memory storage on pixl
-# Test minifier library for stripping multiline comments before uploading
+
  

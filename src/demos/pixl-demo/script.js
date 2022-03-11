@@ -1,4 +1,4 @@
-let connection = new Remote(UART);
+let connection = new Remote();
 
 function connect(){
     connection.connect();
