@@ -20,3 +20,5 @@
 ### dump()
 - Returns promise containing code currently stored within flash storage on the device
 
+### setDelay(int)
+- Allows user to specify a delay, in miliseconds. This controls when the uploader will check to verify the upload process
