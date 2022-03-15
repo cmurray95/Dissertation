@@ -1,8 +1,15 @@
 # espruino-remote-uploader
 
-Allows for code to be uploaded remotely to Espruino hardware devices from a web browser.
+This tool allows for code to be uploaded remotely to Espruino hardware devices from a web browser. 
+The uploader works by fetching a file containing valid espruino code, then writes to a connected espruino device
+using the <a href="https://www.espruino.com/UART.js"> UART.js </a> library. 
 
-# Installation
+The uploader can write to both flash or RAM storage, and will check code currently stored on the device to prevent redundent writes.
+
+The uploader relies upon web bluetooth to work, and as such requires a supported device/browser to work. You can find a list of supported browsers
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API#browser_compatibility">here</a>. 
+
+## Installation
 
 The package can be installed via npm using:
 
@@ -12,7 +19,7 @@ Alternatively, you can include the following script tag:
 
 `<script src="https://unpkg.com/remote-uploader@2.2.1/dist/remote.min.js"></script>`
 
-# Usage
+## Usage
 
 To create a new connection:
 
@@ -24,8 +31,8 @@ connection.connect();
 To upload code to a connected device:
 
 ```
-connection.upload(url).then(result => {
-    if(result){
+connection.upload(url).then(success => {
+    if(success){
         //...
     } else {
         //...
@@ -35,8 +42,8 @@ connection.upload(url).then(result => {
 
 Additionally, you can specify true to upload code directly to flash storage (flash uploading does not work for bangle devices):
 ```
-connection.upload(url,true).then(result => {
-    if(result){
+connection.upload(url,true).then(success => {
+    if(success){
         //...
     } else {
         //...
@@ -44,7 +51,7 @@ connection.upload(url,true).then(result => {
 })
 ```
 
-Retrieve device type (E.g. pixl, bangle, puck):
+Retrieve device type (e.g. pixl, bangle, puck):
 ```
 connection.getDeviceType().then(result => {
     //...
@@ -57,7 +64,7 @@ connection.dump().then((result) => {
 })
 ```
 
-To reset a connection:
+To reset the device (removes all code currently stored on the device):
 
 ```
 connection.reset();
@@ -68,4 +75,3 @@ Disconnect:
 ```
 connection.disconnect();
 ```
-

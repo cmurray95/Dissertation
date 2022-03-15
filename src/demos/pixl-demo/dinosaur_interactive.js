@@ -1,4 +1,4 @@
-// Forked from https://github.com/espruino/EspruinoDocs/blob/master/examples/Dinosaur%20Game.js
+// Modification of https://github.com/espruino/EspruinoDocs/blob/master/examples/Dinosaur%20Game.js
 
 var BTNL = BTN4;
 var BTNR = BTN3;

@@ -1,11 +1,11 @@
-# User manual 
+# User manual for remote.js 
 
 ## Public Methods
 ### connect()
 - Establishes a UART connection with the webpage for writing/reading data from espruino devices
 
 ### Upload(url, flash)
-- Uploads code stored at url and writes to the connected device. Flash flag determines which area of storage code will be written to.
+- Uploads code stored at url and writes to the connected device. Flash flag determines which area of storage code will be written to (Flash uploading is not possible for bangle devices).
 - Returns a promise indicating if the upload was succesful
 
 ### reset()

@@ -5,8 +5,6 @@
 * 2473420M
 * Jonathan Grizou
 
-Week-by-week plan for the whole project. Update this as you go along.
-
 ## Winter semester
 
 * **Week 1**
@@ -78,5 +76,8 @@ Week-by-week plan for the whole project. Update this as you go along.
 - Continue writing
 - Finish documentation
 * **Week 22**
+- Record demo videos
+- Perform evaluation
+- More writing. Aim for first draft to be completed.
 * **Week 23 [TERM ENDS]**
 * **Week 24** Dissertation submission deadline and presentations.

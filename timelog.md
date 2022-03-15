@@ -241,3 +241,8 @@
 ### 10 Mar 2022
 * *1.5 hours* Wrote up tutorial for documentation
 * *1 hours* Researched CSS libraries for improving the UI of the demo apps
+
+# Week 22 #
+### 15 Mar 2022
+* *2 hours* Dissertation writing
+* *3 hours* Fixed issues with documentation setup
