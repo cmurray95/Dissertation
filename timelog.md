@@ -228,7 +228,7 @@
 * *0.5 hours* supervisor meeting
 * *1 hours* tidied up repository and demos
 
-# 05 Mar 2022
+### 05 Mar 2022
 * *1 hours* Setup jekyll site to practice for documentation pages
 
 # Week 21 #
@@ -251,3 +251,4 @@
 ### 16 Mar 2022
 * *3 hours* Added demos to documentation
 * *1 hours* published documentation
+* *2 hours* Designed and Wrote evaluation form

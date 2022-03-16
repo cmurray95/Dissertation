@@ -6,3 +6,7 @@ function connect(){
 function jump() {
     UART.write("jump();\n");
 }
+
+function restart() {
+    UART.write("restart();\n");
+}

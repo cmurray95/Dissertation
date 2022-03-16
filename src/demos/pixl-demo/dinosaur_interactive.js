@@ -225,4 +225,8 @@ function onFrame() {
   g.flip();
 }
 
+function restart(){
+  gameStart();
+}
+
 gameStart();
