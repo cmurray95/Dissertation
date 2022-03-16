@@ -247,3 +247,7 @@
 * *2 hours* Dissertation writing
 * *3 hours* Fixed issues with documentation setup
 * *1 hours* Fixed bug with unpkg script not properly loading
+
+### 16 Mar 2022
+* *3 hours* Added demos to documentation
+* *1 hours* published documentation
