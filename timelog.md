@@ -252,3 +252,8 @@
 * *3 hours* Added demos to documentation
 * *1 hours* published documentation
 * *2 hours* Designed and Wrote evaluation form
+
+### 18 Mar 2022
+* *1 hours* revised evaluation questions
+* *2 hours* Performed some evaluations
+* *1 hours* identified bug with flash writing, this is now fixed

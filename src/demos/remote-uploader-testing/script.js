@@ -4,6 +4,11 @@ function connect(){
     connection.connect();
 }
 
+async function eval() {
+    res = await connection.eval("E.getTemperature()");
+    console.log(res);
+}
+
 function upload(){
     let url = document.getElementById("url").value;
     connection.upload(url).then(result => {
@@ -29,6 +34,17 @@ function data() {
     })
 }
 
+function dino() {
+    let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/main/src/demos/pixl-demo/dinosaur_interactive.js"
+    connection.upload(url,1).then(result => {
+        if(result){
+            document.getElementById("status").innerHTML = "success!";
+        } else {
+            document.getElementById("status").innerHTML = "Failed!";
+        }
+    })
+}
+
 function static() {
     let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/remote-uploader/src/demos/accel-test.js"
     connection.upload(url,0).then(result => {
@@ -42,7 +58,7 @@ function static() {
 
 function staticFlash() {
     let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/remote-uploader/src/demos/accel-test.js"
-    connection.upload(url,1).then(result => {
+    connection.upload(url,true).then(result => {
         if(result){
             document.getElementById("status").innerHTML = 'success!';
         } else {
@@ -59,7 +75,7 @@ function dump(){
 
 function interactive() {
     let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/remote-uploader/src/demos/colour-test.js"
-    connection.upload(url).then(result => {
+    connection.upload(url, true).then(result => {
         if(result){
             window.location.replace("https://cmurray95.github.io/Dissertation/src/demos/colour-test.html");
         } else {

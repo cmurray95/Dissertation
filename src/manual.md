@@ -22,3 +22,9 @@
 
 ### setDelay(int)
 - Allows user to specify a delay, in miliseconds. This controls when the uploader will check to verify the upload process
+
+### call(String)
+- Calls a function from the device. The function name should be passed in as a string, e.g. "foo()"
+
+### eval(String, delay)
+- Calls a function on the device, and returns a promise containing the return value

@@ -1,3 +1,10 @@
 # Wireframe  + diagrams
 # Write diss
-# fix dino demo add restart button
+# Fix bugs from evaluations
+
+# push 3.0 version
+- Minify and test
+- Update npm version
+- Update readme/manuals
+- update script tags
+- Push code
