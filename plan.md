@@ -80,4 +80,7 @@
 - Perform evaluation
 - More writing. Aim for first draft to be completed.
 * **Week 23 [TERM ENDS]**
+- Stop working on code
+- Add gifs to documentation
+- Finish draft
 * **Week 24** Dissertation submission deadline and presentations.

@@ -11,6 +11,8 @@ This tool relies upon web bluetooth to work, and as such requires a supported de
 
 Source code for the uploader is available <a href="https://github.com/cmurray95/espruino-remote-uploader">here</a>
 
+Further documentation along with interactive demos are available <a href="https://cmurray95.github.io/espruino-remote-uploader/">here</a>
+
 ## Installation
 
 The package can be installed via npm using:

@@ -117,3 +117,16 @@ function bangle_flappy() {
         }
     })
 }
+
+function pixl() {
+    let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/main/src/demos/pixl-demo/dinosaur_interactive.js"
+    connection.setDelay(10000);
+    document.getElementById("status").innerHTML = "Uploading..."
+    connection.upload(url,true).then(result => {
+        if(result){
+            window.location.replace("https://cmurray95.github.io/Dissertation/src/demos/pixl-demo/dinosaur/index.html");
+        } else {
+            document.getElementById("status").innerHTML = "Failed!";
+        }
+    })
+}

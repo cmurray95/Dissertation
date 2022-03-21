@@ -257,3 +257,10 @@
 * *1 hours* revised evaluation questions
 * *2 hours* Performed some evaluations
 * *1 hours* identified bug with flash writing, this is now fixed
+
+### 20 Mar 2022
+* *2 hours* Dissertation writing
+
+# Week 23 #
+* *2 hours* Dissertation writing
+* *2 hours* found another bug with PIXL flash uploading, attempted to fix
