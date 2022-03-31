@@ -9,6 +9,14 @@ async function eval() {
     console.log(res);
 }
 
+function connected(){
+    if (connection.isConnected()) {
+        document.getElementById("connected").innerHTML = "yes";
+    } else {
+        document.getElementById("connected").innerHTML = "no";
+    }
+}
+
 function upload(){
     let url = document.getElementById("url").value;
     connection.upload(url).then(result => {

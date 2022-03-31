@@ -262,5 +262,39 @@
 * *2 hours* Dissertation writing
 
 # Week 23 #
+# 21 Mar 2022
 * *2 hours* Dissertation writing
 * *2 hours* found another bug with PIXL flash uploading, attempted to fix
+* *3 hours* Further fixing, fixed various bugs with code during testing
+
+# 22 Mar 2022
+* *2 hours* dissertation writing
+* *1 hours* Setup github action for automating npm updates
+* *1 hours* Collated evaluation feedback and wrote update to supervisor
+
+# 23 Mar 2022
+* *3 hours* Further dissertation writing. Revised abstract and motivation
+* *2 hours* Even more dissertation writing
+
+# 24 Mar 2022
+* *2 hours* edited video and added to documentation
+* *3 hours* Further writing of draft
+
+# 26 Mar 2022
+* *2 hours* Tested asynchronous eval method for retrieiving data from devices
+* *2 hours* Bugfixing for asyceval implementation
+
+
+# Week 24 # 
+# 28 Mar 2022
+* *4 hours* Dissertation writing - Finished background and analysis
+
+# 29 Mar 2022
+* *6 hours* Dissertation writing - revised analysis and background, started design and implementation
+* *2 hours* Wrote test scripts for calculating best delay time.
+* *2 hours* Ran test script for puck, bangle and pixl
+
+# 30 Mar 2022
+* *3 hours* Dissertation writing - Finished design and implementation
+* *2 hours* Started presentation script
+* *1 hours* Generated graphs from test data

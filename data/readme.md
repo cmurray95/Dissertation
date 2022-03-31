@@ -1,4 +1,13 @@
 ## Data
+# User evaluation
+- All user evaluation data was gathered from a survey. The survey is available here: https://forms.gle/22Qx8m9SxYVvtM446
+
+# Delay Value Evaluation
+Each device was tested at different delay value inputs, starting at 500ms and incrementing by 500ms until stopping when it reached 10s. For each interval,
+the test records if an upload was succesful or not. Each delay was tested 10 times.
+
+The resulting csv data for each device can be found in this folder. 
+
 Keep your data (e.g. from evaluations here)
 
 
@@ -19,8 +28,6 @@ Keep your data (e.g. from evaluations here)
 
 * Write scripts to produced processed data from these (e.g. tidy dataframes, excel sheets, csv files, HDF5 files, sqlite databases)
 * Write scripts that process these into results, visualisations, tables that you include in your project.
-* If you use Jupyter/RStudio notebooks, place these in `data/notebooks` and name them carefully (not "Untitled1", "Untitled2").
 
-* You may need to remove the `data/` folder from version control if the data size is too large or you are bound by confidentiality.
-* If you do so **make sure you have good backups**
+
 

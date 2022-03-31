@@ -6,9 +6,9 @@ function connect(){
 
 function upload() {
     let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/main/src/demos/pixl-demo/dinosaur_interactive.js"
-    connection.upload(url,1).then(result => {
+    connection.upload(url).then(result => {
         if(result){
-            window.location.replace("https://cmurray95.github.io/Dissertation/src/demos/pixl-demo/dinosaur/index.html");
+            document.getElementById("controller").style.visibility = "visible";
         } else {
             document.getElementById("status").innerHTML = "Failed!";
         }
@@ -35,4 +35,13 @@ function upload_lunar() {
             document.getElementById("status").innerHTML = "Failed!";
         }
     })
+}
+
+
+function jump() {
+    connection.call("jump();");
+}
+
+function restart() {
+    connection.call("restart();");
 }
