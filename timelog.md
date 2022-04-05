@@ -52,6 +52,7 @@
 
 ### 29 Oct 2021
 * *0.5 hours* Fourth Supervisor Meeting
+* *2 hours* researched history behind Espruino
 
 # Week 6
 ### 01 Nov 2021
@@ -74,7 +75,7 @@
 # Week 8 
 ### 17 Nov 2021
 * *2 hours* Researched UART, specifically nordic UART for bluetooth
-* *1 hours* Read over uart.js api 
+* *2 hours* Read over uart.js api 
 
 ### 18 Nov 2021
 * *1 hours* Converted node.js demo to use uart.js instead
@@ -94,6 +95,7 @@
 ### 26 Nov 2021
 * *0.5 hours* Supervisor meeting
 * *1 hours* Reflected on feedback from meeting and refined project plan
+* *2 hours* Started drafting UML diagram for project
 
 # Week 10 #
 ### 02 Dec 2021
@@ -295,6 +297,33 @@
 * *2 hours* Ran test script for puck, bangle and pixl
 
 # 30 Mar 2022
-* *3 hours* Dissertation writing - Finished design and implementation
+* *3 hours* Dissertation writing - Finished design
 * *2 hours* Started presentation script
 * *1 hours* Generated graphs from test data
+* *2 hours* fixed asynceval and pushed to npm
+
+# 31 Mar 2022
+* *2 hours* Ran tests for Aync Upload for puck, bangle and pixl
+* *1 hours* Generated asynceval test data graphs
+* *2 hours* Wrote presentation Script
+* *2 hours* Drafted evaluation chapter of dissertation
+
+# 01 Apr 2022
+* *2 hours* Expanded background section to discuss security implications of web-bluetooth
+* *2 hours* Continued writing evaluation chapter
+* *3 hours* Made final release build of remote-uploader and pushed to github
+* *2 hours* Wrote presentation slides
+
+# 02 Apr 2022
+* *4 hours* Finished implementation chapter
+
+# 04 Apr 2022
+* *3 hours* Finished Evaluation chapter
+* *2 hours* Wrote conclusion chapter
+* *4 hours* Revised dissertation 
+* *2 hours* redone presentation
+
+# 05 Apr 2022
+* *2 hours* finished presentation
+* *2 hours* recorded presentation
+* *1 hours* Organized work for submission

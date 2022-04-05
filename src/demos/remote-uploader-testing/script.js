@@ -128,7 +128,6 @@ function bangle_flappy() {
 
 function pixl() {
     let url = "https://raw.githubusercontent.com/cmurray95/Dissertation/main/src/demos/pixl-demo/dinosaur_interactive.js"
-    connection.setDelay(10000);
     document.getElementById("status").innerHTML = "Uploading..."
     connection.upload(url,true).then(result => {
         if(result){

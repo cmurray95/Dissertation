@@ -84,3 +84,7 @@
 - Add gifs to documentation
 - Finish draft
 * **Week 24** Dissertation submission deadline and presentations.
+- Revise draft for submission
+- Record presentation
+- Organise submission folder
+- Submit 
