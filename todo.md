@@ -1,2 +1,0 @@
-# Record presentation - Thurs
-# submit :) 
